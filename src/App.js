@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      username: ''
+      username: '',
+      playerData: {}
     }
   }
 
@@ -18,17 +19,20 @@ class App extends Component {
     })
   }
 
+  resetInputField = () => {
+    this.setState({
+      username: ''
+    })
+  }
+
   handleSubmit = (trigger) => {
     trigger.preventDefault()
     getUserData(this.state.username)
       .then(responseData => {
-        if (!responseData)
-          console.log('player not found')
-        else
-          console.log(responseData)
-
+        this.setState({
+          playerData: responseData
+        })
       })
-
   }
 
   render() {
