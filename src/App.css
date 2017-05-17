@@ -1,7 +1,7 @@
 html {
   text-align: center;
   background-color: black;
-  color: rgb(0, 255, 48);
+  color: #0bff00;
 }
 
 .App-logo {
@@ -12,8 +12,8 @@ html {
 .App-header {
   background-color: #222;
   height: 150px;
-  padding: 20px;
-  color: white;
+  padding-bottom: 20px;
+  color: #0bff00;
 }
 
 .App-intro {
