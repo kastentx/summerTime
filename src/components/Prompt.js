@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Prompt(props) {
+export default function Prompt(props) {
   return (
       <form onSubmit={props.onSubmitTag}>
       <div className="form-group col-sm-2 col-sm-offset-5" style={{paddingTop : '20px'}}>
@@ -22,5 +22,3 @@ function Prompt(props) {
     </form>
   )
 }
-
-export default Prompt;

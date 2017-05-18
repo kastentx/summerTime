@@ -4,18 +4,18 @@ import './App.css';
 import Prompt from './components/Prompt'
 import { getUserData } from './utils/api';
 
-class App extends Component {
+export default class App extends Component {
   constructor() {
     super()
     this.state = {
       username: '',
-      playerData: {}
+      playerData: null
     }
   }
 
-  handleInputChange = (change) => {
+  handleInputChange = e => {
     this.setState({
-      username: change.target.value
+      username: e.target.value
     })
   }
 
@@ -25,8 +25,8 @@ class App extends Component {
     })
   }
 
-  handleSubmit = (trigger) => {
-    trigger.preventDefault()
+  handleSubmit = (e) => {
+    e.preventDefault()
     getUserData(this.state.username)
       .then(responseData => {
         this.setState({
@@ -48,8 +48,6 @@ class App extends Component {
             value={this.state.username}
           />
       </div>
-    );
+    )
   }
 }
-
-export default App;
