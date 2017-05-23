@@ -1,26 +1,47 @@
+@font-face {
+	font-family: 'bignoodletitling';
+	src: url('./bignoodletitling.eot');
+	src: local('bignoodletitling'), url('./bignoodletitling.woff') format('woff'), url('./bignoodletitling.ttf') format('truetype');
+}
+
+.spinning-logo {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 html {
   text-align: center;
   background-color: black;
   color: #0bff00;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+h2 {
+  font-family: 'bignoodletitling';
+  font-style: italic;
+  font-size: 5rem;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding-bottom: 20px;
-  color: #0bff00;
+h4 {
+  font-family: 'bignoodletitling';
+  font-style: italic;
+  font-size: 2.5rem;
 }
 
-.App-intro {
-  font-size: large;
+td {
+  background-color: #242424;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 2px solid #000;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+button {
+  background-color : #f51aff;
+  color: white;
 }

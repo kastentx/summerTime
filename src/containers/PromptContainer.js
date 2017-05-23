@@ -33,8 +33,7 @@ export default class PromptContainer extends Component {
     })
 
     // THIS CODE ACTUALLY CALLS THE API
-    /*
-    getUserData(this.state.username)
+    getUserData(this.state.value)
       .then(responseData => {
         this.setState({
           playerData: responseData,
@@ -43,16 +42,18 @@ export default class PromptContainer extends Component {
           value: '',
         })
       })
-    */
 
     // THIS USES HARDCODED JASON DATA FROM THE API FOR NILBOG-1950
+    /*
     this.setState({
       playerData: getTESTUserData(this.state.username),
       username: this.state.value,
       value: '',
       isLoading: false
     })
+    */
   }
+
   logoutUser = () => {
     this.setState({
       username: '',
@@ -75,7 +76,7 @@ export default class PromptContainer extends Component {
             <LoadingLogo loading={this.state.isLoading}/> }
         </div>
         { this.state.playerData ?
-            <div><DataGrid userData={this.state.playerData}/><button onClick={this.logoutUser}>button</button></div> :
+            <div><DataGrid userData={this.state.playerData}/><button className='btn' onClick={this.logoutUser}>Go Back</button></div> :
             <Prompt
               onSubmitTag={this.handleSubmit}
               onUpdateTag={this.handleInputChange}

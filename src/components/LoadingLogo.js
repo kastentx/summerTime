@@ -11,7 +11,7 @@ const logoStyle = {
 const LoadingLogo = (props) => {
   return (
     props.loading ?
-      <h2>Loading</h2> :
+      <img className="spinning-logo" src={owLogo} alt="Overwatch logo" style={logoStyle}/> :
       <img src={owLogo} alt="Overwatch logo" style={logoStyle}/>
   )
 }

@@ -15,7 +15,6 @@ export default function Prompt(props) {
       <div className="form-group col-sm-2 col-sm-offset-5">
         <button
           className="btn"
-          style={{backgroundColor : '#f51aff', color: 'white'}}
           type="submit">
           Lookup
         </button>
