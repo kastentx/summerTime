@@ -5,8 +5,9 @@ export default function Prompt(props) {
       <form onSubmit={props.onSubmitTag}>
       <div className="form-group col-sm-2 col-sm-offset-5" style={{paddingTop : '20px'}}>
         <input
+          style={{maxWidth: '240px', marginLeft: 'auto', marginRight: 'auto'}}
           onChange={props.onUpdateTag}
-          value={props.battleTag}
+          value={props.value}
           className="form-control"
           placeholder="battleTag-1234"
           type="text" />

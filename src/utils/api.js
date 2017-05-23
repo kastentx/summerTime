@@ -1,4 +1,5 @@
 import axios from 'axios';
+import data from '../overwatchData.json';
 
 const getUserData = (username) => {
   let encodedURI = window.encodeURI('https://owapi.net/api/v3/u/' + username + '/stats')
@@ -9,4 +10,8 @@ const getUserData = (username) => {
     .catch(err => {console.warn(err)})
 }
 
-export { getUserData }
+const getTESTUserData = (username) => {
+  return data.us.stats;
+}
+
+export { getUserData, getTESTUserData }
