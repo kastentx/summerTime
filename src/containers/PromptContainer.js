@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Prompt from '../components/Prompt'
-import { getUserData, getTESTUserData } from '../utils/api';
+import { getUserData } from '../utils/api';
 import Heading from '../components/Heading';
 import LoadingLogo from '../components/LoadingLogo';
 import AvatarImg from '../components/AvatarImg';
